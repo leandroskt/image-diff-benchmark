@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "bench": "ts-node scripts/runBenchmarks.ts",
+    "start": "ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -20,12 +22,13 @@
   "devDependencies": {
     "@types/node": "^22.15.30",
     "@types/pixelmatch": "^5.2.6",
-    "@vitest/coverage-v8": "^3.2.2",
+    "@types/pngjs": "^6.0.5",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3",
-    "vitest": "^3.2.2"
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "resemblejs": "^5.0.0"
+    "looks-same": "^9.0.1",
+    "pixelmatch": "^7.1.0",
+    "pngjs": "^7.0.0"
   }
 }
